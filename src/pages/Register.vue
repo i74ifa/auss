@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import person from "./../components/icons/person.vue";
 import phone from "./../components/icons/phone.vue";
 </script>
