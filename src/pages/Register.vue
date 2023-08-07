@@ -105,6 +105,14 @@ import phone from "./../components/icons/phone.vue";
             />
           </div>
         </div>
+        <div>
+          <button
+            type="submit"
+            class="py-2.5 px-4 bg-[#43A09D] hover:bg-[#36807d] focus:ring-gray-500 focus:ring-offset-indigo-200 text-white transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg w-full"
+          >
+            إنشاء
+          </button>
+        </div>
       </form>
     </div>
   </div>
