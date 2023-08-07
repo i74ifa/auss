@@ -1,10 +1,10 @@
 <template>
   <div class="bg-[url('/maskgroup.png')] bg-left bg-no-repeat h-screen">
     <div class="max-w-screen-xl mx-auto">
-      <div class="flex justify-between pt-40 items-center mb-20">
-        <div class="text-2xl max-w-2xl text-gray-700">
+      <div class="grid md:grid-cols-2 pt-40 items-center mb-20 md:px-2 px-5">
+        <div class=" text-xl md:text-2xl max-w-2xl text-gray-700 order-2 md:order-1 text-center md:text-inherit ">
           <p>منصة أُسس لتمويل نقاط البيع</p>
-          <p class="mb-3">
+          <p class="mb-3 ">
             منصة تعميد تساعد بدورها عمل وتعزيز شركات المعلومات الائتمانية و
             التصنيف الائتماني والمراجعة والتدقيق المالي التي سوف تحسن من قدرة
             تقييم المخاطر للشركات الصغيرة والمتوسطة في المملكة
@@ -18,13 +18,13 @@
             </button>
           </div>
         </div>
-        <div class="w-96">
+        <div class="w-96 mx-auto">
           <img src="../assets/nfc_hand1.png" alt="" />
         </div>
       </div>
       <div class="mb-40">
         <h1 class="text-center text-3xl mb-4">شركاؤنا</h1>
-        <div class="py-20 bg-white/30 rounded-lg flex justify-around flex-wrap">
+        <div class="py-20 bg-white/30 rounded-lg flex justify-around flex-wrap gap-y-10 md:gap-y-2">
           <div>
             <img src="/alrajhi.png" class="w-40" alt="">
           </div>
