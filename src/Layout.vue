@@ -1,6 +1,6 @@
 <template>
   <header class="bg-white">
-    <div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8 relative">
       <div class="flex h-20 items-center justify-between">
         <div class="md:flex md:items-center md:gap-12">
           <router-link class="block text-teal-600" to="/">
@@ -24,7 +24,7 @@
               <li>
                 <router-link
                   class="text-gray-500 transition hover:text-gray-500/75"
-                  to="/"
+                  to="/about"
                 >
                   عن المنصة
                 </router-link>
@@ -33,7 +33,7 @@
               <li>
                 <a
                   class="text-gray-500 transition hover:text-gray-500/75"
-                  href="/"
+                  href="/contact-us"
                 >
                   تواصل معنا
                 </a>
@@ -41,6 +41,34 @@
             </ul>
           </nav>
         </div>
+        <!-- Mobile menu -->
+        <transition mode="in-out" name="fromTop">
+          <div
+            class="md:hidden"
+            :class="{ block: isMenuOpen, hidden: !isMenuOpen }"
+          >
+            <div class="grid bg-white absolute w-full left-0 top-20 mt-px z-30">
+              <router-link
+                @click="closeMenu"
+                class="text-right block py-5 px-3 hover:bg-gray-100"
+                to="/"
+                >الرئيسية</router-link
+              >
+              <router-link
+                @click="closeMenu"
+                class="text-right block py-5 px-3 hover:bg-gray-100"
+                to="/about"
+                >عن المنصة</router-link
+              >
+              <router-link
+                @click="closeMenu"
+                class="text-right block py-5 px-3 hover:bg-gray-100"
+                to="/contact-us"
+                >تواصل معنا</router-link
+              >
+            </div>
+          </div>
+        </transition>
 
         <div class="flex items-center gap-4">
           <div class="sm:flex sm:gap-4">
@@ -63,6 +91,7 @@
 
           <div class="block md:hidden">
             <button
+              @click="isMenuOpen = !isMenuOpen"
               class="rounded bg-gray-100 p-2 text-gray-600 transition hover:text-gray-600/75"
             >
               <svg
@@ -89,3 +118,12 @@
     <slot />
   </main>
 </template>
+<script lang="ts" setup>
+import { ref } from "vue";
+
+const isMenuOpen = ref(true);
+
+const closeMenu = () => {
+  isMenuOpen.value = false;
+};
+</script>
