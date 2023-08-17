@@ -121,7 +121,7 @@
 <script lang="ts" setup>
 import { ref } from "vue";
 
-const isMenuOpen = ref(true);
+const isMenuOpen = ref(false);
 
 const closeMenu = () => {
   isMenuOpen.value = false;
