@@ -24,7 +24,7 @@
           <img src="../assets/nfc_hand1.png" alt="" />
         </div>
       </div>
-      <div class="mb-40">
+      <div class="mb-40" v-if="false">
         <h1 class="text-center text-3xl mb-4">شركاؤنا</h1>
         <div
           class="py-20 bg-white/30 rounded-lg flex justify-around flex-wrap gap-y-10 md:gap-y-2"
